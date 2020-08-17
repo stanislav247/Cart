@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
 import 'antd/dist/antd.css';
+import 'aos/dist/aos.css';
 import {Switch , Route} from 'react-router-dom'; 
 import Navbarr from './Components/Navbar.js';
 import ProductList from './Components/ProductList.js';

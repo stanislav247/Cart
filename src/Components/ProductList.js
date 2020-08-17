@@ -6,25 +6,33 @@ import {Consumer} from '../provider.js';
 
 class ProductList extends Component {
     state = {  
-        games: games
+        games: games,
+               
     }
-
-    render() { 
+     
+    render() {  
+          
         return ( 
+            
             <>
             <div className="py-5">
                 <div className="container">
-                      <Title name="Games"/>
+                      <Title name="HOT STUFF"/>
                             
                     <div className="row">
-                        <Consumer>
-                            {value=>{
-                                return value.games.map(game=>{
-                                   return  <Product key={game.id} game={game} />
-                                })                                  
-                                
-                            }}
-                        </Consumer>
+                        <Consumer>                            
+                            {value=>{                               
+                                return( 
+                                    <>                                                                                                                                        
+                                    {value.games.map(game=>{
+                                   return <Product key={game.id} game={game} />                                                                                                                                                                                                                  
+                                  })}                                    
+                                          
+                                     </>                                              
+         )}}  
+                                                                                                                                                                                                                      
+                        </Consumer>   
+                                      
                     </div>
                 </div>
             </div>
@@ -34,3 +42,4 @@ class ProductList extends Component {
 }
  
 export default ProductList;
+

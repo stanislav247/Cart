@@ -95,6 +95,7 @@ export const games = [
         total: 0
     }
 
+
 ];
 
 export const gameDetail = {

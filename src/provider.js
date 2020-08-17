@@ -11,7 +11,7 @@ class Provider extends Component {
       cart: [],
       cartTotal :0,
       subTotal:0,
-      cartTax: 0
+      cartTax: 0,
      }
     
      // present copy of items instead  original form.
@@ -126,17 +126,19 @@ class Provider extends Component {
     }
 
     render() { 
+        
         return ( 
+            
             <ProductContext.Provider value={{
-                ...this.state,
+                ...this.state,              
                 handleDetail:this.handleDetail,
                 addToCart:this.addToCart,
                 handleIncrement: this.handleIncrement,
                 handleDecrement:this.handleDecrement,
                 handleDelete: this.handleDelete,
-                clearCart:this.clearCart
+                clearCart:this.clearCart,       
                 }}>
-                {this.props.children}
+                {this.props.children},               
             </ProductContext.Provider>
          );
     }

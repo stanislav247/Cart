@@ -1,5 +1,4 @@
 body{
-	font-family: 'Rowdies', cursive !important;
 	overflow-x: hidden ;
 }
 
@@ -8,8 +7,7 @@ body{
 	transition: 0.4s ease-in-out;
 }
 .game-cover:hover{
-	box-shadow: 10px 10px 5px grey;
-	transition: 0.4s ease-in-out;
+	transform: scale(1.1);
 }
 /* remove btn effects*/
 button:focus{

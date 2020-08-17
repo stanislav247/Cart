@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import {Consumer} from '../provider.js';
 import {Link} from 'react-router-dom';
-
+import Aos from 'aos';
 
 class Product extends Component {
     
+componentDidMount() {
+    Aos.init({duration: 600});
+}
+
     render() { 
         const {id, title, img , price , inCart} = this.props.game; 
 
         return (
-            <div className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+            <div data-aos="fade-up" 
+                 data-aos-once="true"
+                 data-aos-anchor-placement="center-bottom"
+
+            className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                 <div className="cardd">
                     <Consumer>
                      {value=>(

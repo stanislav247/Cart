@@ -37,7 +37,7 @@ const CartItem = ({item , value}) => {
                     <FontAwesomeIcon icon={faTrash} size="2x" color="orange" onClick={()=>handleDelete(id)} className="trash mt-2"/>              
              </div> 
              <div className="col-10 mx-auto col-lg-2 mt-2">
-                    <strong>Total: {Math.floor(total * 100) / 100} €</strong>                     
+                    <strong>Total: {total.toFixed(2)} €</strong>                     
                </div>            
          </div>
         </>

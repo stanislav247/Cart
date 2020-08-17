@@ -23,7 +23,7 @@ class Cart extends Component {
                             <Title name="Your Cart"/>
                             <CartTable />
                             <CartList value={value}/>
-                            <CartTotlas value={value} />
+                            <CartTotlas value={value} history={this.props.history} />
                             </>
                             )
                         }
